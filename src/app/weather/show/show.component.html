@@ -1,0 +1,129 @@
+
+<h4 class="title"> Real Data Feed from openweathermap API</h4>
+
+<div>
+Charts in this page created By <img src="./assets/chartjs-logo.svg" class="img32" alt=""> <strong>Chart.js</strong> 
+ based on Realtime data from <a href="https://openweathermap.org" target="_blank">
+  <img src="./assets/OpenWeatherMap.svg" class="img16"   alt="openweathermap"></a>  And
+  <img src="./assets/gmap.png" class="img16"   alt="openweathermap">&nbsp; <strong>Google maps </strong>
+through thier APIs 
+</div>
+
+<div class="form-group col-md-6 col-xs-12 mt-3">
+<label for="city" class="form-label"> Choose City </label>    <select class="form-control" name="" id="city" (change) = "setCity($event.target.value)">
+<option value="2950159">Berlin, DE</option>
+<option value="360630" selected>Cairo, Eg</option>
+<option value="292223">Dubai, AE</option>   
+<option value="4298960">London, US</option>  
+      <option value="3117735">Madrid, ES</option>   
+
+    <option value="2988507">Paris, FR</option>
+<option value="1850147">Tokyo, JP</option>
+    <option value="6167865">Toronto, CA</option>
+</select>
+</div>
+ 
+
+<section>
+  <div class="row pb-4" *ngIf = "cityData.city">
+  <div class="col-lg-6 col-sm-12  ">
+
+<div class="x_panel  h-100" >
+
+
+ <div class="x_title" >
+ <h5> {{cityData.city}} , {{cityData.country}} <small>   <i class="fa fa-clock-o" aria-hidden="true"></i>
+      {{cityData.weather.dt_txt}}</small> </h5>
+ </div>
+ <div class="x_content">
+
+   <div class="text-center text-bold  ">
+ <img src="https://openweathermap.org/img/w/{{cityData.weather.weather[0].icon}}.png" >
+ <span class="subtitle">{{cityData.weather.weather[0].description}}  </span> 
+</div>
+
+ <ul class="list-group list-group-flush">
+    
+    <li class="list-group-item"><i class="fa fa-thermometer-empty" aria-hidden="true"></i> <span>Temp : </span>  {{cityData.weather.main.temp}}  &#8451;</li>
+    <li class="list-group-item"><i class="fa fa-angle-double-down" aria-hidden="true"></i>
+   <span> Pressure :</span>   {{cityData.weather.main.pressure}}  hpa </li>
+    <li class="list-group-item"><i class="fa fa-ship" aria-hidden="true"></i><span>Sea Level : </span>   {{cityData.weather.main.sea_level}} </li>
+    <li class="list-group-item"><i class="fa fa-tint" aria-hidden="true"></i>
+      <span>Humidity: </span>   {{cityData.weather.main.humidity}}  % </li>
+    <li class="list-group-item"><i class="fa fa-cloud" aria-hidden="true"></i>
+      <span> wind Speed:</span>   {{cityData.weather.wind.speed}}   m/s</li>
+ 
+
+</ul>
+ 
+ </div>
+
+</div>
+</div>
+
+<div class="col-lg-6 col-sm-12"> 
+    <div class="x_panel h-100" >
+      <p><strong>Note: Although the map is working correctly ,</strong>  you may see note on map as  Google Maps API started to be paid solution on July 16th, 2018.  </p>
+        <div class="x_content" *ngIf ="cityData.coord">
+        <agm-map [latitude]="cityData.coord.lat" [longitude]="cityData.coord.lon">
+            <agm-marker [latitude]="cityData.coord.lat" [longitude]="cityData.coord.lon"></agm-marker>
+          </agm-map>
+ </div>
+    </div>
+
+
+</div>
+
+</div>
+</section>
+
+<section>
+    <div class="row">
+<div class="col-12">
+
+
+<div class="x_panel" >
+
+
+<div class="x_title" *ngIf = "cityData.city">
+ <h5> {{cityData.city}} , {{cityData.country}}<small>  temprature </small></h5>
+ 
+  
+</div>
+<div class="x_content">
+
+
+<div [hidden]="!chart">
+<canvas id="canvas">{{chart}}</canvas>
+</div>   
+</div>
+
+</div>
+</div></div>
+</section>
+
+
+<section>
+  <div class="row">
+<div class="col-12">
+                 
+    <div class="x_panel" >
+
+ 
+      <div class="x_title" *ngIf = "cityData.city">
+        <h5> {{cityData.city}} , {{cityData.country}}<small>  Humidity </small></h5>
+        
+         
+      </div>
+      <div class="x_content">
+
+
+     <div [hidden]="!chart2">
+<canvas id="canvas2">{{chart2}}</canvas>
+</div>   
+      </div>
+    </div> </div>
+  </div>
+  </section>
+  
+

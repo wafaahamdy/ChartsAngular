@@ -1,0 +1,129 @@
+<h4 class="title"> Different types of updateable charts</h4>
+
+<div>
+        Charts in this page created By <img src="./assets/chartjs-logo.svg" class="img32" alt=""> <strong>Chart.js</strong> 
+      data is updated with user votes and this updated is reflected on different types of charts 
+        </div>
+
+        
+
+<div class="row">
+<div class="col-lg-6 col-sm-12"> 
+    <div class="x_panel" >
+    <div class="x_title" >
+        <h5> Vote for your favorite browser   </h5>
+      </div>
+       <div class="x_content">
+
+          <ul class="list-group list-group ">
+ <li class="list-group-item">
+              <strong>Firefox</strong>  <span class="badge badge-info ml-3">{{browsers.firefox}}</span>  <div class="ml-auto text-right">
+                  <button class="btn btn-default btn-sm" (click) = "incBrowser('firefox')"> <i class="fa fa-plus" aria-hidden="true"></i> </button> 
+                 <span class="mr-1 ml-1"></span>
+                  <button class="btn btn-default btn-sm" (click) = "decBrowser('firefox')" [disabled] = "browsers.firefox == 0" ><i class="fa fa-minus" aria-hidden="true"></i> </button>
+              </div>
+                </li>
+
+              <li class="list-group-item">
+              <strong>  Chrome</strong>  <span class="badge badge-info ml-3">{{browsers.chrome}}</span>   <div class="ml-auto text-right"> 
+                  <button class="btn btn-default btn-sm" (click) = "incBrowser('chrome') "> <i class="fa fa-plus" aria-hidden="true"></i> </button> 
+                 <span class="mr-1 ml-1"></span>
+                  <button class="btn btn-default btn-sm" (click) = "decBrowser('chrome')  " [disabled] = "browsers.chrome == 0" ><i class="fa fa-minus" aria-hidden="true"></i> </button>
+</div> 
+
+              </li>
+              
+
+             
+
+            
+
+              <li class="list-group-item">
+               <strong> Safari</strong> <span class="badge badge-info ml-3">{{browsers.safari}}</span>   <div class="ml-auto text-right">
+                  <button class="btn btn-default btn-sm" (click) = "incBrowser ('safari')  "> <i class="fa fa-plus" aria-hidden="true"></i> </button> 
+                 <span class="mr-1 ml-1"></span>
+                  <button class="btn btn-default btn-sm" (click) = "decBrowser ('safari')"  [disabled] = "browsers.safari == 0"  ><i class="fa fa-minus" aria-hidden="true"></i> </button>
+
+</div>
+              </li>
+
+              <li class="list-group-item">
+                 <strong>Edge</strong> <span class="badge badge-info ml-3">{{browsers.edge}}</span>   <div class="ml-auto text-right">
+                  <button class="btn btn-default btn-sm" (click) = "incBrowser('edge') "> <i class="fa fa-plus" aria-hidden="true"></i> </button> 
+                 <span class="mr-1 ml-1"></span>
+                  <button class="btn btn-default btn-sm" (click) = "decBrowser('edge')"  [disabled] = "browsers.edge == 0"  ><i class="fa fa-minus" aria-hidden="true"></i> </button>
+</div>
+
+              </li>
+
+              <li class="list-group-item">
+                    <strong>Opera </strong> <span class="badge badge-info ml-3">{{browsers.opera}}</span> 
+                    
+                      <div class="ml-auto text-right"> <button class="btn btn-default btn-sm" (click) = "incBrowser('opera')   "> <i class="fa fa-plus" aria-hidden="true"></i> </button> 
+                     <span class="mr-1 ml-1"></span>
+                      <button class="btn btn-default btn-sm" (click) = "decBrowser('opera')"  [disabled] = "browsers.opera == 0" > <i class="fa fa-minus" aria-hidden="true"></i> </button>
+    
+     </div>
+                     
+                  </li>
+
+            </ul>
+
+
+    </div>
+  </div>    
+</div>
+
+
+
+<div class="col-lg-6 col-sm-12"> 
+    <div class="x_panel" >
+    <div class="x_title" >
+        <h5> Current votes VS. 2018 users votes    </h5>
+      </div>
+      <div class="x_content">
+          <div  >
+              <canvas id="canvas">{{chart}}</canvas>
+              </div>   
+      
+      </div>
+    </div>  
+</div>
+
+
+</div>
+
+
+<div class="row">
+
+    <div class="col-lg-6 col-sm-12"> 
+        <div class="x_panel" >
+        <div class="x_title" >
+            <h5> Current votes for browsers <small>Pie Chart</small> </h5>
+          </div>
+          <div class="x_content">
+              <div  >
+                  <canvas id="canvas2">{{chart2}}</canvas>
+                  </div>   
+          
+          </div>
+        </div>  
+    </div>
+
+
+    <div class="col-lg-6 col-sm-12"> 
+            <div class="x_panel" >
+            <div class="x_title" >
+                <h5> Current votes for browsers <small>Polar area chart</small> </h5>
+              </div>
+              <div class="x_content">
+                  <div  >
+                      <canvas id="canvas3">{{chart3}}</canvas>
+                      </div>   
+              
+              </div>
+            </div>  
+        </div>
+    
+
+</div>

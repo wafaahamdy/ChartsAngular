@@ -1,0 +1,18 @@
+main
+{ background-color:  #f7f7f7 ;}
+
+
+div.copyright {
+    background-color: #272c2c;
+    float: left;
+    min-height: 40px;
+    width: 100%;
+}
+div.copyright p {
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 0;
+    padding: 10px 0;
+    text-align: left;
+}
+ 

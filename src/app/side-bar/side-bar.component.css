@@ -1,0 +1,124 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+    background: #2a3f54; }
+    .sidebar a {
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: .7rem;
+      letter-spacing: .2rem;
+      padding: .75rem 1rem; }
+    .sidebar em {
+      font-size: 1rem; }
+    .sidebar h1 , .sidebar .navbar-toggler {
+      color: #ffffff;
+      border: none;
+      font-size: 0.9rem;
+      padding: 0rem 1rem;
+      text-transform: uppercase;
+      letter-spacing: .2rem; }
+    .sidebar .site-title {
+      margin-top: .5rem;
+      margin-bottom: 1.75rem; }
+      .sidebar .site-title a {
+        font-size: .9rem;
+        padding-left: 0;
+        padding-right: 0;
+        cursor: pointer; }
+      .sidebar .site-title a:hover {
+        background: none !important; }
+    .sidebar  .nav {
+      margin-bottom: 20px; }
+    .sidebar .nav-item {
+      width: 100% !important; }
+    .sidebar .nav-item + .nav-item {
+      margin-left: 0; }
+    .sidebar .nav-link {
+      border-radius: 0; }
+    
+  
+  .sidebar   ul.nav {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important ;  }
+
+    .sidebar  ul.nav >li  {
+          width: 100% !important;
+       margin-left: 0 !important ;
+       margin-right: 0 !important ;
+      background: rgb(42, 63, 84 , 0.5);
+      color: #ffffff;
+      margin-top: 10px;
+      }
+
+
+    
+  
+   
+  
+      .child_menu > li:hover  , .child_menu> li.active     {
+background: #425668 !important;
+  border-right: #20b095 8px solid ;}
+
+  .sidebar-nav img {
+width: 32px;
+  }
+  .sidebar .tt {
+    background-color: #354a5f !important; 
+  }    
+  .sidebar .child_menu li:before {
+    background: #425668;
+    bottom: auto;
+    content: "";
+    height: 8px;
+    left: 23px;
+    margin-top: 15px;
+    margin-left: 13px; 
+    position: absolute;
+    right: auto;
+    width: 8px;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+ 
+
+.sidebar .child_menu li {
+  padding-left:10px;
+  list-style: none ;
+  border-left: 1px solid #425668;
+ 
+}
+
+
+  .sidebar .child_menu>li>a {
+    color: rgba(255,255,255,.75);
+    font-size: 12px;
+    padding: 9px;
+}
+
+
+
+
+
+
+    @media screen and (max-width: 767px) {
+       
+      
+        .sidebar {
+          position: inherit;
+          padding-bottom: 0px;
+            }
+      
+      }
+     
+    

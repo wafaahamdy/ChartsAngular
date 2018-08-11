@@ -1,0 +1,28 @@
+agm-map {
+    height: 340px;
+  }
+
+  .fa {
+    color: rgb(4, 63, 73) ;
+    size: 2em;
+    min-width: 20px;
+  
+  }
+
+  .subtitle
+  {
+    color: rgb(72, 83, 83);
+    text-transform: capitalize ;
+    font-weight: bold ; 
+  }
+  .list-group-item span{
+    margin-left: 15px;
+    margin-right: 15px;
+    color: rgb(53, 49, 49) ;
+    text-transform: capitalize ;
+    font-weight: bold ; 
+
+  }
+
+
+  

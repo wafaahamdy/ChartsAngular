@@ -1,0 +1,84 @@
+<h4 class="title"> Special Kinds of charts </h4>
+
+<div>
+Charts in this page created By <img src="./assets/ploty.png" class="img32" alt=""> <strong>Ploty.js</strong> 
+based on dynamic data , <strong>Realtime stock </strong>data  feed from  <a href="https://www.alphavantage.co" target="_blank">
+<img src="./assets/vantag.png" class="img16"   alt="https://www.alphavantage.co"></a>
+
+<p> Hover the chart & use Toolbar to manage your charts <img src="./assets/images/toolbar.jpg" class="img-fluid" alt=""></p>
+</div>
+
+<section>
+    <div class="row" >
+        <div   class="col-12">
+            <div class="x_panel" >
+                <div class="x_title" >
+                <h5> Realtime data Time Series <small> Stock changes </small></h5>
+                </div>
+                <div class="x_content">  
+                    <div #chart2 class="chart"  >
+                        <!-- Chart will appear here -->
+                      </div>
+                  </div>
+        </div></div>
+             
+             
+    </div> 
+
+
+
+  <div class="row" >
+
+      <div   class="col-lg-6 col-sm-12">
+          <div class="x_panel" >
+              <div class="x_title" >
+              <h5> Animated chart <small>Stock prices </small></h5>
+              </div>
+              <div class="x_content">
+                  <div #chart3 class="chart"  >
+                      <!-- Chart will appear here -->
+                    </div>
+                </div>
+          </div> </div> 
+
+  <div   class="col-lg-6 col-sm-12">
+      <div class="x_panel" >
+          <div class="x_title" >
+          <h5> Circular Gauge Chart </h5>
+          </div>
+          <div class="x_content">  
+            
+            <div class="alert text-danger" *ngIf="(speed.errors?.required && speed.touched) || error "> Enter number Between 0 , 180   </div>
+              <form class="form-inline" #f = "ngForm" name="f" (ngSubmit) = "circularChart(f.value.speed)">
+
+                  <div class="form-group">
+                  
+                     <input type="text" name = "speed" #speed = "ngModel"  ngModel class="form-control mr-sm-2 mb-2" id=""
+                      placeholder="Enter speed from 0 to 180"  required  >
+                   <button class="btn btn-info mb-2" > Set Speed </button>
+                 
+                    </div>
+                
+                
+                
+                </form>
+                
+                <div #chart class="chart"  >
+                  <!-- Chart will appear here -->
+                </div>
+                
+</div></div>
+  </div>
+
+
+       
+
+  
+  </div>
+
+
+        
+  </section>
+
+
+
