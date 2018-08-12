@@ -6,7 +6,7 @@ you can Access Demo at <a href="https://spot-charts.firebaseapp.com/"> https://s
 This Project Developed by <a href = "https://wafaa-hamdy.firebaseapp.com/"> Wafaa Hamdy </a> Full Stack Web Develloper
 
 # Realtime Data
-Realtime data integrated from different Apis like 
+Realtime data integrated from different Apis like  openweathermap.org (Realtime weather data) , alphavantage.co (Realtime Stock data), google maps 
 
 
 ## Development server
